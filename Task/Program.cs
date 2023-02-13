@@ -22,3 +22,20 @@ int CountElemetNewArray(string[] collection, int countSymbol)
     }
     return count;
 }
+
+string[] GetNewArrayString(string[] collection, int lengthArray, int countSymbol)
+{   
+    string[] newArr = new string[lengthArray];
+    int newIndex = 0;
+    for (int i = 0; i < collection.Length; i++)
+    {
+        if (collection[i].Length <= countSymbol)
+        {
+            newArr[newIndex] = collection[i];
+            newIndex++;
+        }
+        
+    }
+    return newArr;
+}
+
