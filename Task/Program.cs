@@ -39,3 +39,18 @@ string[] GetNewArrayString(string[] collection, int lengthArray, int countSymbol
     return newArr;
 }
 
+string PrintArray(string[] priarray)
+{
+    string output = String.Empty;
+    for (int i = 0; i < priarray.Length; i++)
+    {
+        output = output + $"{priarray[i]} ";
+    }
+    return output;
+}
+string[] arr = FillArray();
+int countSymbol = CountElementInStringArray("\nВедите количество символовов для элементов нового массива (по условию задачи <= 3): ");
+string[] newArr = GetNewArrayString(arr, CountElemetNewArray(arr, countSymbol), countSymbol);
+string print = PrintArray(arr);
+string newPrint = PrintArray(newArr);
+Console.WriteLine($"\nИзначальный массив строк [ {print}] => \nОтформатированный массив строк [ {newPrint}]\n");
